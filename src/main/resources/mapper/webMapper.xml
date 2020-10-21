@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.edu.mapper.webMapper">
+    <insert id="insertNew" parameterType="com.example.edu.bean.Teacher">
+        INSERT INTO teacher (name,mobile,password) VALUES (#{name},#{mobile},#{password})
+    </insert>
+    <select id="getTeacher" parameterType="com.example.edu.bean.Teacher" resultType="com.example.edu.bean.Teacher">
+        SELECT * from teacher WHERE mobile = #{mobile}
+    </select>
+</mapper>
